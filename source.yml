@@ -2,3 +2,7 @@ name: sonar_toolkit
 
 imports:
     - github: rock-core/rock-package_set
+
+version_control:
+    - rock/tools/pocolog_cpp:
+        github: rock-core/pocolog_cpp
