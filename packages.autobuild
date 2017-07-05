@@ -1,0 +1,5 @@
+cmake_package 'sonar_toolkit/third_party'
+cmake_package 'sonar_toolkit/base'
+
+metapackage 'sonar_toolkit',
+    'tools/pocolog_cpp'

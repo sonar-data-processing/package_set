@@ -4,5 +4,9 @@ imports:
     - github: rock-core/rock-package_set
 
 version_control:
-    - rock/tools/pocolog_cpp:
+    - tools/pocolog_cpp:
         github: rock-core/pocolog_cpp
+    - sonar_toolkit/third_party:
+        github: sonar-data-processing/third_party
+    - sonar_toolkit/base:
+        github: sonar-data-processing/base
