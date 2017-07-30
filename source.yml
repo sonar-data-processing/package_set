@@ -10,3 +10,15 @@ version_control:
         github: sonar-data-processing/third_party
     - sonar_toolkit/base:
         github: sonar-data-processing/base
+    - sonar_toolkit/sonar_util:
+        github: sonar-data-processing/sonar_util
+    - sonar_toolkit/rock_util:
+        github: sonar-data-processing/rock_util
+    - sonar_toolkit/sonarlog2video:
+        github: sonar-data-processing/sonarlog2video
+    - sonar_toolkit/image_picker_tool:
+        github: sonar-data-processing/image_picker_tool
+    - sonar_toolkit/sonar_processing:
+        github: sonar-data-processing/sonar_processing
+    - sonar_toolkit/sonarlog_annotation:
+        github: sonar-data-processing/sonarlog_annotation

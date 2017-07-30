@@ -1,5 +1,21 @@
 cmake_package 'sonar_toolkit/third_party'
 cmake_package 'sonar_toolkit/base'
+cmake_package 'sonar_toolkit/sonar_util'
+cmake_package 'sonar_toolkit/rock_util'
+cmake_package 'sonar_toolkit/sonarlog2video'
+cmake_package 'sonar_toolkit/image_picker_tool'
+cmake_package 'sonar_toolkit/sonar_processing'
+cmake_package 'sonar_toolkit/sonarlog_annotation'
+
+Autoproj.env_set 'SONAR_TOOLKIT_PREFIX', File.join(Autobuild.prefix,'share','sonar_toolkit')
 
 metapackage 'sonar_toolkit',
-    'tools/pocolog_cpp'
+    'tools/pocolog_cpp',
+    'sonar_toolkit/third_party',
+    'sonar_toolkit/base',
+    'sonar_toolkit/sonar_util',
+    'sonar_toolkit/rock_util',
+    'sonar_toolkit/sonarlog2video',
+    'sonar_toolkit/image_picker_tool',
+    'sonar_toolkit/sonar_processing',
+    'sonar_toolkit/sonarlog_annotation'
