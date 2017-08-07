@@ -6,16 +6,28 @@ cmake_package 'sonar_toolkit/sonarlog2video'
 cmake_package 'sonar_toolkit/image_picker_tool'
 cmake_package 'sonar_toolkit/sonar_processing'
 cmake_package 'sonar_toolkit/sonarlog_annotation'
+cmake_package 'sonar_toolkit/sonarlog_target_tracking'
 cmake_package 'sonar_toolkit/data'
 
 Autoproj.env_set 'SONAR_TOOLKIT_PREFIX', File.join(Autobuild.prefix,'share','sonar_toolkit')
+Autoproj.env_set 'LD_LIBRARY_PATH', File.join(Autobuild.prefix,'lib','sonar_toolkit')
 
-metapackage 'sonar_toolkit',
+metapackage 'sonar_toolkit-base',
     'sonar_toolkit/third_party',
     'sonar_toolkit/base',
     'sonar_toolkit/sonar_util',
     'sonar_toolkit/rock_util',
-    'sonar_toolkit/sonarlog2video',
+    'sonar_toolkit/sonar_processing'
+
+metapackage 'sonar_toolkit-annotation',
+    'sonar_toolkit-base',
     'sonar_toolkit/image_picker_tool',
-    'sonar_toolkit/sonar_processing',
     'sonar_toolkit/sonarlog_annotation'
+
+metapackage 'sonar_toolkit-log2video',
+    'sonar_toolkit-base',
+    'sonar_toolkit/sonarlog2video'
+
+metapackage 'sonar_toolkit-target_tracking',
+    'sonar_toolkit-base',
+    'sonar_toolkit/sonarlog_target_tracking'

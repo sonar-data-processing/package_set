@@ -19,3 +19,5 @@ version_control:
         github: sonar-data-processing/sonar_processing
     - sonar_toolkit/sonarlog_annotation:
         github: sonar-data-processing/sonarlog_annotation
+    - sonar_toolkit/sonarlog_target_tracking:
+        github: sonar-data-processing/sonarlog_target_tracking
