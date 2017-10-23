@@ -1,0 +1,61 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3979d1e..6abd8a9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -3,6 +3,10 @@ project (sonar_processing)
+ 
+ find_package ( Eigen3 REQUIRED )
+ 
++include(FindPkgConfig)
++find_package(PkgConfig)
++
++
+ file ( GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp )
+ file ( GLOB HEADERS ${PROJECT_SOURCE_DIR}/src/*.hpp )
+ 
+@@ -22,12 +26,12 @@ add_library (
+ 
+ install(
+     FILES ${HEADERS}
+-    DESTINATION include/${PROJECT_NAME}
++    DESTINATION include/sonar_toolkit/${PROJECT_NAME}
+ )
+ 
+ install(
+     TARGETS sonar_processing
+-    DESTINATION lib
++    DESTINATION lib/sonar_toolkit/
+ )
+ 
+ configure_file(
+diff --git a/sonar_processing.pc.in b/sonar_processing.pc.in
+deleted file mode 100644
+index 4813585..0000000
+--- a/sonar_processing.pc.in
++++ /dev/null
+@@ -1,11 +0,0 @@
+-prefix=@CMAKE_INSTALL_PREFIX@
+-exec_prefix=@CMAKE_INSTALL_PREFIX@
+-libdir=${prefix}/lib
+-includedir=${prefix}/include
+-
+-Name: sonar_processing
+-Description: Sonar processing functions
+-Version: 0.1
+-Requires: opencv base-types
+-Libs: -L${libdir} -lsonar_processing
+-Cflags: -I${includedir}
+diff --git a/src/sonar_processing.pc.in b/src/sonar_processing.pc.in
+index 4813585..ebf5557 100644
+--- a/src/sonar_processing.pc.in
++++ b/src/sonar_processing.pc.in
+@@ -1,7 +1,7 @@
+ prefix=@CMAKE_INSTALL_PREFIX@
+ exec_prefix=@CMAKE_INSTALL_PREFIX@
+-libdir=${prefix}/lib
+-includedir=${prefix}/include
++libdir=${prefix}/lib/sonar_toolkit
++includedir=${prefix}/include/sonar_toolkit
+ 
+ Name: sonar_processing
+ Description: Sonar processing functions

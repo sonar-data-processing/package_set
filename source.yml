@@ -15,9 +15,11 @@ version_control:
         github: sonar-data-processing/sonarlog2video
     - sonar_toolkit/image_picker_tool:
         github: sonar-data-processing/image_picker_tool
-    - sonar_toolkit/sonar_processing:
-        github: sonar-data-processing/sonar_processing
     - sonar_toolkit/sonarlog_annotation:
         github: sonar-data-processing/sonarlog_annotation
     - sonar_toolkit/sonarlog_target_tracking:
         github: sonar-data-processing/sonarlog_target_tracking
+    - sonar_toolkit/sonar_processing:
+        github: Brazilian-Institute-of-Robotics/perception-sonar_processing
+        patches:
+            - [$AUTOPROJ_SOURCE_DIR/patches/sonar_processing.patch, 1]
